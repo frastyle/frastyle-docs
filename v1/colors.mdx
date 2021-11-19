@@ -1,0 +1,228 @@
+import CodeBox from '../../components/codeBox';
+
+## Warna
+
+Tambahan perlengkapan berupa warna yang dapat diaplikasikan ke dalam elemen dengan hanya memasukkan class.
+
+Warna yang disediakan pada file `frastyle.css` dan kompresinya merupakan warna standar.
+
+<div className='row text-center mx-1'>
+	<div className='card box-6 box-m-3 bg-success white outline-black p-1'>
+		Berhasil
+	</div>
+	<div className='card box-6 box-m-3 bg-warning white outline-black p-1'>
+		Peringatan
+	</div>
+	<div className='card box-6 box-m-3 bg-danger white outline-black p-1'>
+		Bahaya
+	</div>
+	<div className='card box-6 box-m-3 bg-info white outline-black p-1'>
+		Info
+	</div>
+	<div className='card box-6 box-m-3 bg-black white outline-black p-1'>
+		Hitam
+	</div>
+	<div className='card box-6 box-m-3 bg-dark white outline-black p-1'>
+		Gelap
+	</div>
+	<div className='card box-6 box-m-3 bg-dark-1 white outline-black p-1'>
+		Gelap 1
+	</div>
+	<div className='card box-6 box-m-3 bg-dark-2 white outline-black p-1'>
+		Gelap 2
+	</div>
+	<div className='card box-6 box-m-3 bg-dark-3 white outline-black p-1'>
+		Gelap 3
+	</div>
+	<div className='card box-6 box-m-3 bg-dark-4 white outline-black p-1'>
+		Gelap 4
+	</div>
+	<div className='card box-6 box-m-3 bg-dark-5 white outline-black p-1'>
+		Gelap 5
+	</div>
+	<div className='card box-6 box-m-3 bg-white outline-black p-1'>Putih</div>
+	<div className='card box-6 box-m-3 bg-light outline-black p-1'>Cerah</div>
+	<div className='card box-6 box-m-3 bg-light-1 outline-black p-1'>
+		Cerah 1
+	</div>
+	<div className='card box-6 box-m-3 bg-light-2 outline-black p-1'>
+		Cerah 2
+	</div>
+	<div className='card box-6 box-m-3 bg-light-3 outline-black p-1'>
+		Cerah 3
+	</div>
+	<div className='card box-6 box-m-3 bg-light-4 outline-black p-1'>
+		Cerah 4
+	</div>
+	<div className='card box-6 box-m-3 bg-light-5 outline-black p-1'>
+		Cerah 5
+	</div>
+</div>
+
+<br />
+
+Selain parameter warna diatas, terdapat parameter warna lain yang dapat digunakan yaitu `--primary` dan `--secondary`. Namun, kedua parameter ini belum memiliki standar nilai. Tentu dari parameter warna yang tersedia, Anda dapat menggunakan dan menyesuaikan warnanya.
+
+### Latar Belakang
+
+Penerpan warna pada latar belakang elemen dapat dilakukan dengan menambahkan class `bg-` yang diikuti dengan parameter warna.
+
+| Class            | Keterangan                 |
+| ---------------- | -------------------------- |
+| `bg-primary`     | Latar belakang utama       |
+| `bg-secondary`   | Latar belakang sekunder    |
+| `bg-success`     | Latar belakang berhasil    |
+| `bg-warning`     | Latar belakang peringatan  |
+| `bg-danger`      | Latar belakang bahaya      |
+| `bg-info`        | Latar belakang warna info  |
+| `bg-black`       | Latar belakang warna hitam |
+| `bg-dark`        | Latar belakang gelap       |
+| `bg-dark-[1-5]`  | Latar belakang gelap 1-5   |
+| `bg-white`       | Latar belakang warna putih |
+| `bg-light`       | Latar belakang cerah       |
+| `bg-light-[1-5]` | Latar belakang cerah 1-5   |
+
+<br />
+
+##### # Contoh
+
+<div className='bg-primary white text-center p-1'>
+	<span>Latar belakang utama</span>
+</div>
+<div className='bg-dark-3 white text-center p-1'>
+	<span>Latar belakang gelap-3</span>
+</div>
+
+<CodeBox lang='html'>{`
+<div class='bg-primary'>
+    <span>Latar belakang utama</span>
+</div>
+<div class='bg-dark-3'>
+    <span>Latar belakang gelap-3</span>
+</div>
+`}</CodeBox>
+
+### Teks
+
+Warna dalam elemen teks dapat diterapkan hanya dengan menambahkan class parameter warna.
+
+| Class         | Keterangan       |
+| ------------- | ---------------- |
+| `primary`     | Teks utama       |
+| `secondary`   | Teks sekunder    |
+| `success`     | Teks berhasil    |
+| `warning`     | Teks peringatan  |
+| `danger`      | Teks bahaya      |
+| `info`        | Teks warna info  |
+| `black`       | Teks warna hitam |
+| `dark`        | Teks gelap       |
+| `dark-[1-5]`  | Teks gelap 1-5   |
+| `white`       | Teks warna putih |
+| `light`       | Teks cerah       |
+| `light-[1-5]` | Teks cerah 1-5   |
+
+<br />
+
+##### # Contoh
+
+<div className='primary text-center p-1'>
+	<span>Teks utama</span>
+</div>
+<div className='dark-3 text-center p-1'>
+	<span>Teks gelap-3</span>
+</div>
+
+<CodeBox lang='html'>{`
+<div class='primary'>
+    <span>Teks utama</span>
+</div>
+<div class='dark-3'>
+    <span>Teks gelap-3</span>
+</div>
+`}</CodeBox>
+
+### Garis Tepi
+
+Warna dalam elemen teks dapat diterapkan hanya dengan menambahkan class parameter warna.
+
+| Class                 | Keterangan             |
+| --------------------- | ---------------------- |
+| `outline-primary`     | Garis tepi utama       |
+| `outline-secondary`   | Garis tepi sekunder    |
+| `outline-success`     | Garis tepi berhasil    |
+| `outline-warning`     | Garis tepi peringatan  |
+| `outline-danger`      | Garis tepi bahaya      |
+| `outline-info`        | Garis tepi warna info  |
+| `outline-black`       | Garis tepi warna hitam |
+| `outline-dark`        | Garis tepi gelap       |
+| `outline-dark-[1-5]`  | Garis tepi gelap 1-5   |
+| `outline-white`       | Garis tepi warna putih |
+| `outline-light`       | Garis tepi cerah       |
+| `outline-light-[1-5]` | Garis tepi cerah 1-5   |
+
+<br />
+
+##### # Contoh
+
+<div className='outline-primary text-center p-1 mb-1'>
+	<span>Garis tepi utama</span>
+</div>
+<div className='outline-light-3 text-center p-1'>
+	<span>Garis tepi cerah-3</span>
+</div>
+
+<CodeBox lang='html'>{`
+<div class='outline-primary'>
+    <span>Garis tepi utama</span>
+</div>
+<div class='outline-light-3'>
+    <span>Garis tepi cerah-3</span>
+</div>
+`}</CodeBox>
+
+### Penyesuaian Gaya
+
+Menyesuaikan nilai dari parameter warna sesuai dengan yang Anda inginkan dapat dilakukan dengan menggunakan berbagai cara berikut:
+
+##### # Melalui selektor `:root`
+
+Pada file `.css` Anda, parameter warna dapat disesuaikan melalui selektor `:root`. Berikut cara penggunaannya:
+
+<div className='alert-warning'>
+	<span>
+		Ingat bahwa penggunaan selektor <code>:root</code> dapat mempengaruhi
+		parameter warna secara global/menyeluruh.
+	</span>
+</div>
+
+<iframe
+	width='100%'
+	height='240'
+	src='//jsfiddle.net/bagasnur/xgotr6sn/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
+	style={{
+		width: '100%',
+		border: '1px solid var(--dark)',
+		borderRadius: '16px',
+		overflow: 'hidden',
+        marginBottom: '16px'
+	}}></iframe>
+
+##### # Melalui selektor elemen tertentu
+
+Pada file `.css` Anda, menerapkan parameter warna untuk setiap elemen tertentu dapat dilakukan dengan cara berikut:
+
+<iframe
+	width='100%'
+	height='240'
+	src='//jsfiddle.net/bagasnur/jofpw0v9/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
+	style={{
+		width: '100%',
+		border: '1px solid var(--dark)',
+		borderRadius: '16px',
+		overflow: 'hidden',
+        marginBottom: '16px'
+	}}></iframe>
+
+<br />
+
+---
