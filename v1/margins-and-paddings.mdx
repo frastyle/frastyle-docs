@@ -1,0 +1,150 @@
+import CodeBox from '../../components/codeBox';
+import MarginPadding from '../../../assets/img/docs-margin-padding.png';
+
+## Margin & Padding
+
+### Pengenalan
+
+***Margin*** merupakan jarak sisi luar dari elemen atau dapat diartikan juga sebagai jarak antar elemen.
+
+***Padding*** merupakan jarak sisi dalam dari elemen atau dapat diartikan juga sebagai jarak antara suatu elemen dengan isi elemen tersebut.
+
+<img src={ MarginPadding } className="fit-contain" width="100%" height="96px" />
+
+##### # Catatan
+
+Class untuk menuliskan properti margin dan padding yang berlaku di semua breakpoint menggunakan format `[properti][sisi]-[ukuran]`, sedangkan untuk breakpoint yang spesifik menggunakan format `[properti][sisi]-[breakpoit]-[ukuran]`.
+
+Ingin menggunakan untuk tata letak sistem grid Frastyle? Coba untuk mempertimbangkan penggunaan [class Gap](./grids-systems).
+
+###### Penjelasan format
+
+| [properti]            | Keterangan                 |
+| :--------------: | -------------------------- |
+| `m`     | Menerapkan ke dalam properti **'margin'**      |
+| `p`   | Menerapkan ke dalam properti **'padding'**    |
+
+<br />
+
+| [sisi]            | Keterangan                 |
+| :--------------: | -------------------------- |
+| `x`     | Mengatur nilai sisi **kanan** dan **kiri**       |
+| `y`   | Mengatur nilai sisi **atas** dan **bawah**    |
+| `t`     | Mengatur nilai sisi **atas**      |
+| `r`   | Mengatur nilai sisi **kanan**    |
+| `b`     | Mengatur nilai sisi **bawah**      |
+| `l`   | Mengatur nilai sisi **kiri**    |
+
+<br />
+
+Penggunaan `[sisi]` bersifat opsional sehingga apabila tidak menggunakan parameter ini, maka margin/padding akan diaplikasikan ke seluruh sisi elemen dengan nilai yang sama.
+
+<br />
+
+| [ukuran]            | Keterangan                 |
+| :--------------: | -------------------------- |
+| `0`     | Menerapkan jarak sebesar **0** atau untuk menghilangkan jarak     |
+| `1`   | Menerapkan jarak sebesar **16px** (standar)   |
+| `2`     | Menerapkan jarak sebesar **32px** (standar)      |
+| `3`   | Menerapkan jarak sebesar **48px** (standar)    |
+| `4`     | Menerapkan jarak sebesar **64px** (standar)      |
+| `5`   | Menerapkan jarak sebesar **80px** (standar)   |
+| `6`   | Menerapkan jarak sebesar **96px** (standar)    |
+| `7`     | Menerapkan jarak sebesar **112px** (standar)      |
+| `8`   | Menerapkan jarak sebesar **128px** (standar)    |
+| `9`     | Menerapkan jarak sebesar **144px** (standar)      |
+| `auto`   | Menerapkan jarak **otomatis** (hanya berlaku pada margin)    |
+
+<br />
+
+Penjelasan mengenai format **[breakpoint]** dapat dilihat pada menu [Tata Letak: Responsif](./responsive).
+
+### Penggunaan
+
+##### # Margin
+
+<div class='text-center p-2'>
+	<div class='d-flex' style={{background: '#f4af2580'}}>
+		<div class='bg-light-2 m-0' style={{flex: '1 1 0'}}>Margin 0</div>
+		<div class='bg-light-2 m-0' style={{flex: '1 1 0'}}>Margin 0</div>
+	</div>
+    <br />
+	<div class='d-flex' style={{background: '#f4af2580'}}>
+		<div class='bg-light-2 m-1' style={{flex: '1 1 0'}}>Margin 1</div>
+		<div class='bg-light-2 m-1' style={{flex: '1 1 0'}}>Margin 1</div>
+	</div>
+    <br />
+	<div class='d-flex' style={{background: '#f4af2580'}}>
+		<div class='bg-light-2 mx-2 my-1' style={{flex: '1 1 0'}}>Margin: X-2, Y-1</div>
+		<div class='bg-light-2 mx-2 my-1' style={{flex: '1 1 0'}}>Margin: X-2, Y-1</div>
+	</div>
+    <br />
+	<div class='d-flex' style={{background: '#f4af2580'}}>
+		<div class='bg-light-2 mx-4 m-m-2' style={{flex: '1 1 0'}}>Margin: X-4, M-2</div>
+		<div class='bg-light-2 mx-4 m-m-2' style={{flex: '1 1 0'}}>Margin: X-4, M-2</div>
+	</div>
+</div>
+
+<CodeBox lang='html'>{`
+<div class='d-flex'>
+    <div class='bg-light-2 m-0'>Margin 0</div>
+    <div class='bg-light-2 m-0'>Margin 0</div>
+</div>
+<div class='d-flex'>
+    <div class='bg-light-2 m-1'>Margin 1</div>
+    <div class='bg-light-2 m-1'>Margin 1</div>
+</div>
+<div class='d-flex'>
+    <div class='bg-light-2 mx-2 my-1'>Margin: X-2, Y-1</div>
+    <div class='bg-light-2 mx-2 my-1'>Margin: X-2, Y-1</div>
+</div>
+<div class='d-flex'>
+    <div class='bg-light-2 mx-4 m-m-2'>Margin: X-4, M-2</div>
+    <div class='bg-light-2 mx-4 m-m-2'>Margin: X-4, M-2</div>
+</div>
+`}</CodeBox>
+
+##### # Padding
+
+<div class='text-center'>
+	<div class='p-0' style={{background: '#1dc93980', width: 'fit-content'}}>
+		<span class='bg-light-2'>Padding 0</span>
+	</div>
+    <br />
+	<div class='p-1' style={{background: '#1dc93980', width: 'fit-content'}}>
+		<span class='bg-light-2'>Padding 1</span>
+	</div>
+    <br />
+	<div class='px-2 py-1' style={{background: '#1dc93980', width: 'fit-content'}}>
+		<span class='bg-light-2'>Padding: X-2, Y-1</span>
+	</div>
+    <br />
+	<div class='px-4 p-m-2' style={{background: '#1dc93980', width: 'fit-content'}}>
+		<span class='bg-light-2'>Padding: X-4, M-2</span>
+	</div>
+</div>
+
+<CodeBox lang='html'>{`
+<span class='bg-light-2 p-0'>Padding 0</span>
+<span class='bg-light-2 p-1'>Padding 1</span>
+<span class='bg-light-2 px-2 py-1'>Padding: X-2, Y-1</span>
+<span class='bg-light-2 px-4 p-m-2'>Padding: X-4, M-2</span>
+`}</CodeBox>
+
+### Pemosisian ke Tengah
+
+Melakukan pemosisian ke tengah secara horizontal untuk konten yang memiliki properti `display: block;` dan `width` dapat dilakukan dengan menambahkan class `m-auto` atau `mx-auto`.
+
+<div class='m-auto' style={{width: 'fit-content'}}>
+    <span class='bg-light-2'>Konten berada di tengah</span>
+</div>
+
+<CodeBox lang='html'>{`
+<div class='m-auto' style="width: fit-content;">
+    <span class='bg-light-2'>Konten berada di tengah</span>
+</div>
+`}</CodeBox>
+
+<br />
+
+---
