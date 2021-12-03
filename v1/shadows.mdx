@@ -1,0 +1,139 @@
+import CodeBox from '../../components/codeBox';
+
+## Bayangan
+
+Perlengkapan tambahan berupa bayangan dapat ditambahkan pada sebuah elemen dengan menuliskan class `shadow` atau `shadow-[tipe]`. Perlengkapan bayangan ini, juga mendukung penggunaan [breakpoint responsif](./responsive) dengan format penulisan `shadow-[breakpoint]-[tipe]` Berikut penjelasan tipe-tipe pada bayangan:
+
+###### Tipe bayangan
+
+| [properti]          | Keterangan                                                 |
+| ------------------- | ---------------------------------------------------------- |
+| `shadow`            | Menerapkan bayangan normal                                 |
+| `shadow-small`      | Menerapkan bayangan kecil                                  |
+| `shadow-large`      | Menerapkan bayangan lebih besar                            |
+| `shadow-dark`       | Menerapkan bayangan normal untuk latar belakang gelap      |
+| `shadow-dark-small` | Menerapkan bayangan kecil untuk latar belakang gelap       |
+| `shadow-dark-large` | Menerapkan bayangan lebih besar untuk latar belakang gelap |
+
+<br />
+
+##### # Contoh Penggunaan
+
+<div class='px-1 pt-1 pb-3'>
+	<div class='box shadow-small p-2'>
+		<code>shadow-small</code> atau <code>shadow-[breakpoit]-small</code>
+	</div>
+	<div class='box shadow p-2'>
+		<code>shadow</code> atau <code>shadow-[breakpoit]</code>
+	</div>
+	<div class='box shadow-large p-2'>
+		<code>shadow-large</code> atau <code>shadow-[breakpoit]-large</code>
+	</div>
+</div>
+
+<CodeBox lang='html' className='mb-3'>{`
+<div class='box shadow-small p-2'>
+    <code>shadow-small</code> atau <code>shadow-[breakpoit]-small</code>
+</div>
+<div class='box shadow p-2'>
+    <code>shadow</code> atau <code>shadow-[breakpoit]</code>
+</div>
+<div class='box shadow-large p-2'>
+    <code>shadow-large</code> atau <code>shadow-[breakpoit]-large</code>
+</div>
+`}</CodeBox>
+
+<div class='bg-dark-3 white px-1 py-2'>
+	<div class='box shadow-dark-small p-2'>
+		<code>shadow-dark-small</code> atau{' '}
+		<code>shadow-[breakpoit]-dark-small</code>
+	</div>
+	<div class='box shadow-dark p-2'>
+		<code>shadow-dark</code> atau <code>shadow-[breakpoit]-dark</code>
+	</div>
+	<div class='box shadow-dark-large p-2'>
+		<code>shadow-dark-large</code> atau{' '}
+		<code>shadow-[breakpoit]-dark-large</code>
+	</div>
+</div>
+
+<CodeBox lang='html' className='mt-1 mb-3'>{`
+<!-- Untuk latar belakang Gelap -->
+<div class='box shadow-dark-small p-2'>
+    <code>shadow-dark-small</code> atau <code>shadow-[breakpoit]-dark-small</code>
+</div>
+<div class='box shadow-dark p-2'>
+    <code>shadow-dark</code> atau <code>shadow-[breakpoit]-dark</code>
+</div>
+<div class='box shadow-dark-large p-2'>
+    <code>shadow-dark-large</code> atau <code>shadow-[breakpoit]-dark-large</code>
+</div>
+`}</CodeBox>
+
+###### Menggunakan breakpoint
+
+<div class='px-1 pb-3 pt-1'>
+	<div class='box shadow-small shadow-m p-2'>
+		<code>shadow-small</code> dan <code>shadow-m</code>
+	</div>
+</div>
+
+<CodeBox lang='html' className='mb-3'>{`
+<div class='box shadow-small shadow-m p-2'>
+    <code>shadow-small</code> dan <code>shadow-m</code>
+</div>
+`}</CodeBox>
+
+### Penyesuaian Gaya
+
+| Properti              | Keterangan                                      |
+| --------------------- | ----------------------------------------------- |
+| `--shadow`            | Bayangan normal                                 |
+| `--shadow-small`      | Bayangan kecil                                  |
+| `--shadow-large`      | Bayangan lebih besar                            |
+| `--shadow-dark`       | Bayangan normal untuk latar belakang gelap      |
+| `--shadow-dark-small` | Bayangan kecil untuk latar belakang gelap       |
+| `--shadow-dark-large` | Bayangan lebih besar untuk latar belakang gelap |
+
+<br />
+
+Menyesuaikan gaya pada class bayangan sesuai dengan yang Anda inginkan dapat dilakukan dengan menggunakan berbagai cara berikut:
+
+##### # Melalui selektor `:root`
+
+Pada file `.css` Anda, menerapkan gaya bayangan dapat disesuaikan melalui selektor global yaitu menggunakan `:root`. Berikut cara penggunaannya:
+
+<div className='alert-warning'>
+	<span>
+		Ingat bahwa penggunaan selektor <code>:root</code> dapat mempengaruhi
+		gaya bayangan secara global/menyeluruh.
+	</span>
+</div>
+
+<iframe
+	width='100%'
+	height='324'
+	src='//jsfiddle.net/bagasnur/huwd4e3L/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
+	allowfullscreen='allowfullscreen'
+	allowpaymentrequest
+	className='mb-2 outline-dark'
+	style={{
+		borderRadius: '16px',
+		overflow: 'hidden',
+	}}></iframe>
+
+##### # Melalui selektor elemen tertentu
+
+Pada file `.css` Anda, menerapkan bayangan untuk setiap elemen tertentu dapat dilakukan dengan cara berikut:
+
+<iframe
+	width='100%'
+	height='324'
+	src='//jsfiddle.net/bagasnur/ovc5njpu/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
+	allowfullscreen='allowfullscreen'
+	allowpaymentrequest
+	className='mb-2 outline-dark'
+	style={{
+		borderRadius: '16px',
+		overflow: 'hidden',
+	}}></iframe>
