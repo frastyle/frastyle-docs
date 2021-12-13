@@ -9,13 +9,16 @@ import MarginPadding from '../../../assets/img/docs-margin-padding.png';
 
 **_Padding_** merupakan jarak sisi dalam dari elemen atau dapat diartikan juga sebagai jarak antara suatu elemen dengan isi elemen tersebut.
 
-<img src={MarginPadding} className='fit-contain' width='100%' height='96px' />
+<img
+	src={MarginPadding}
+	className='fit-contain mb-1'
+	width='100%'
+	height='96px'
+/>
 
-##### # Catatan
+Untuk menuliskan class pada properti margin dan padding yang berlaku di semua breakpoint responsif menggunakan format `[properti][sisi]-[ukuran]`, sedangkan untuk breakpoint responsif yang spesifik menggunakan format `[properti][sisi]-[breakpoit]-[ukuran]`.
 
-Class untuk menuliskan properti margin dan padding yang berlaku di semua breakpoint responsif menggunakan format `[properti][sisi]-[ukuran]`, sedangkan untuk breakpoint responsif yang spesifik menggunakan format `[properti][sisi]-[breakpoit]-[ukuran]`.
-
-Ingin menggunakan untuk tata letak sistem grid Frastyle? Coba untuk mempertimbangkan penggunaan [class Gap](./grids-systems).
+Ingin menggunakan properti ini untuk tata letak sistem grid Frastyle? Coba untuk mempertimbangkan penggunaan [class Gap](./grids-systems).
 
 ###### Penjelasan format
 
@@ -63,7 +66,7 @@ Penjelasan mengenai format **[breakpoint]** dapat dilihat pada menu [Tata Letak:
 
 ##### # Margin
 
-<div class='text-center p-2'>
+<div class='text-center px-2 pt-1 pb-2'>
 	<div class='d-flex' style={{ background: '#f4af2580' }}>
 		<div class='bg-light-2 m-0' style={{ flex: '1 1 0' }}>
 			Margin 0
@@ -101,7 +104,7 @@ Penjelasan mengenai format **[breakpoint]** dapat dilihat pada menu [Tata Letak:
 	</div>
 </div>
 
-<CodeBox lang='html'>{`
+<CodeBox lang='html' className='mb-2'>{`
 <div class='d-flex'>
     <div class='bg-light-2 m-0'>Margin 0</div>
     <div class='bg-light-2 m-0'>Margin 0</div>
@@ -122,7 +125,7 @@ Penjelasan mengenai format **[breakpoint]** dapat dilihat pada menu [Tata Letak:
 
 ##### # Padding
 
-<div class='text-center'>
+<div class='text-center px-2 pt-1 pb-2'>
 	<div class='p-0' style={{ background: '#1dc93980', width: 'fit-content' }}>
 		<span class='bg-light-2'>Padding 0</span>
 	</div>
@@ -144,7 +147,7 @@ Penjelasan mengenai format **[breakpoint]** dapat dilihat pada menu [Tata Letak:
 	</div>
 </div>
 
-<CodeBox lang='html'>{`
+<CodeBox lang='html' className='mb-3'>{`
 <span class='bg-light-2 p-0'>Padding 0</span>
 <span class='bg-light-2 p-1'>Padding 1</span>
 <span class='bg-light-2 px-2 py-1'>Padding: X-2, Y-1</span>
@@ -155,11 +158,11 @@ Penjelasan mengenai format **[breakpoint]** dapat dilihat pada menu [Tata Letak:
 
 Melakukan pemosisian ke tengah secara horizontal untuk konten yang memiliki properti `display: block;` dan `width` dapat dilakukan dengan menambahkan class `m-auto` atau `mx-auto`.
 
-<div class='m-auto' style={{ width: 'fit-content' }}>
+<div class='mx-auto my-2' style={{ width: 'fit-content' }}>
 	<span class='bg-light-2'>Konten berada di tengah</span>
 </div>
 
-<CodeBox lang='html'>{`
+<CodeBox lang='html' className='mb-1'>{`
 <div class='m-auto' style="width: fit-content;">
     <span class='bg-light-2'>Konten berada di tengah</span>
 </div>

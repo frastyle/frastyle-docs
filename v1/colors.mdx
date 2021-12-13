@@ -93,7 +93,7 @@ Penerpan warna pada latar belakang elemen dapat dilakukan dengan menambahkan cla
 	<span>Latar belakang gelap-3</span>
 </div>
 
-<CodeBox lang='html'>{`
+<CodeBox lang='html' className='mt-1 mb-3'>{`
 <div class='bg-primary'>
     <span>Latar belakang utama</span>
 </div>
@@ -132,7 +132,7 @@ Warna dalam elemen teks dapat diterapkan hanya dengan menambahkan class paramete
 	<span>Teks gelap-3</span>
 </div>
 
-<CodeBox lang='html'>{`
+<CodeBox lang='html' className='mt-1 mb-3'>{`
 <div class='primary'>
     <span>Teks utama</span>
 </div>
@@ -171,7 +171,7 @@ Penerapan warna untuk garis tepi sebuah elemen dapat diterapkan hanya dengan men
 	<span>Garis tepi cerah-3</span>
 </div>
 
-<CodeBox lang='html'>{`
+<CodeBox lang='html' className='mt-1 mb-3'>{`
 <div class='outline-primary'>
     <span>Garis tepi utama</span>
 </div>
@@ -201,11 +201,10 @@ Pada file `.css` Anda, parameter warna dapat disesuaikan melalui selektor `:root
 	src='//jsfiddle.net/bagasnur/xgotr6sn/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
 	allowfullscreen='allowfullscreen'
 	allowpaymentrequest
+	className='mb-2 outline-dark'
 	style={{
-		border: '1px solid var(--dark)',
 		borderRadius: '16px',
 		overflow: 'hidden',
-		marginBottom: '16px',
 	}}></iframe>
 
 ##### # Melalui selektor elemen tertentu
@@ -218,9 +217,8 @@ Pada file `.css` Anda, menerapkan parameter warna untuk setiap elemen tertentu d
 	src='//jsfiddle.net/bagasnur/jofpw0v9/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
 	allowfullscreen='allowfullscreen'
 	allowpaymentrequest
+	className='mb-2 outline-dark'
 	style={{
-		border: '1px solid var(--dark)',
 		borderRadius: '16px',
 		overflow: 'hidden',
-		marginBottom: '16px',
 	}}></iframe>

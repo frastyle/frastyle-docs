@@ -14,7 +14,7 @@ Ingin menggunakan metode instalasi lain? Tenang, kami menyediakan metode lain un
 
 Cukup dengan memasukkan perintah berikut ke file `.html` di dalam elemen tag `<head>`, Anda sudah melakukan instalasi Frastyle framework.
 
-<CodeBox lang="xml">
+<CodeBox lang="xml" className='mb-3'>
 {`<!-- Frastyle Framework -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frastyle-css/dist/css/frastyle.min.css">`}
 </CodeBox>
@@ -25,15 +25,17 @@ Sering menggunakan package manager? Cukup dengan menjalankan salah satu kode ber
 
 Anda menggunakan Yarn? pakai kode berikut:
 
-<CodeBox lang='bash'>{`yarn add frastyle`}</CodeBox>
+<CodeBox lang='bash' className='mb-1'>{`yarn add frastyle`}</CodeBox>
 
 atau Anda menggunakan NPM? pakai kode berikut:
 
-<CodeBox lang='bash'>{`npm install frastyle --save`}</CodeBox>
+<CodeBox lang='bash' className='mb-1'>{`npm install frastyle --save`}</CodeBox>
 
 Setelah selesai melakukan instalasi Yarn/NPM, masukkan kode berikut ke dalam file `.css` proyek Anda untuk menggunakan framework.
 
-<CodeBox lang='css'>{`@import "./node_modules/frastyle-css/dist/css/frastyle.min.css";`}</CodeBox>
+<CodeBox
+	lang='css'
+	className='mb-3'>{`@import "./node_modules/frastyle-css/dist/css/frastyle.min.css";`}</CodeBox>
 
 ### Unduh Framework
 
