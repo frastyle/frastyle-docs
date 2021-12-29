@@ -1,0 +1,113 @@
+import CodeBox from '../../components/codeBox';
+
+## Kartu
+
+Komponen kartu merupakan sebuah komponen kontainer konten. Kartu juga menyediakan opsi penyesuaian warna latar belakang, warna teks, garis tepi, jarak konten dengan garis tepi, dan nilai tumpul sudut kartu.
+
+##### # Contoh Penggunaan
+
+<div class='row justify-center mx-1'>
+	<div class='card box-10 box-m-8 mx-0'>
+		<h6>Lorem ipsum</h6>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+			Consectetur dolor ex sapiente odio, ea aliquid.
+		</p>
+	</div>
+</div>
+
+<CodeBox lang='html' className='mt-1 mb-3'>{`
+<div class="card">
+	<h6>Lorem ipsum</h6>
+	<p>
+		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur 
+		dolor ex sapiente odio, ea aliquid.
+	</p>
+</div>
+`}</CodeBox>
+
+<div class='row justify-center mx-1'>
+	<div class='card box-10 box-m-8 mx-0'>
+		<div className='card-img mb-1'>
+			<img
+				src='https://github.com/bagasnur/frastyle-resource/blob/main/cards/thank-you.png?raw=true'
+				alt='Image Card'
+				width='100%'
+			/>
+		</div>
+		<div class='card-desc'>
+			<h6>Lorem ipsum</h6>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+				Consectetur dolor ex sapiente odio, ea aliquid.
+			</p>
+		</div>
+	</div>
+</div>
+
+<CodeBox lang='html' className='mt-1 mb-3'>{`
+<div class="card box-10 box-m-8 mx-0">
+	<div className="card-img mb-1">
+		<img src="image-card.png" alt="Image Card" width="100%" />
+	</div>
+	<div class="card-desc">
+		<h6>Lorem ipsum</h6>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur 
+			dolor ex sapiente odio, ea aliquid.
+		</p>
+	</div>
+</div>
+`}</CodeBox>
+
+###### Tipe kartu
+
+<div className='alert-info'>
+	<span>
+		Untuk beberapa tema, komponen kartu memiliki tipe yang tersedia seperti
+		tabel berikut. Namun pada standar framework fitur ini{' '}
+		<b>dinonaktifkan</b>.
+	</span>
+</div>
+
+| Class            | Keterangan             |
+| ---------------- | ---------------------- |
+| `card-primary`   | Warna kartu utama      |
+| `card-secondary` | Warna kartu sekunder   |
+| `card-success`   | Warna kartu berhasil   |
+| `card-warning`   | Warna kartu peringatan |
+| `card-danger`    | Warna kartu bahaya     |
+| `card-info`      | Warna kartu info       |
+
+<br />
+
+### Penyesuaian Gaya
+
+Komponen navigasi lokasi memiliki opsi penyesuaian gaya diantaranya:
+
+| Properti        | Keterangan                                    |
+| --------------- | --------------------------------------------- |
+| `--bg-card`     | Mengatur warna latar belakang kartu           |
+| `--text-card`   | Mengatur warna teks pada kartu                |
+| `--space-card`  | Mengatur jarak konten dengan garis tepi kartu |
+| `--border-card` | Mengatur garis tepi pada kartu                |
+| `--corner-card` | Mengatur tumpul sudut kartu                   |
+
+<br />
+
+Penyesuaian gaya ini dapat diterapkan dengan menggunakan berbagai cara berikut:
+
+##### # Melalui selektor `:root`
+
+Pada file `.css` Anda, penyesesuaian melalui selektor global yaitu menggunakan `:root` dapat dilakukan dengan cara berikut:
+
+<div className='alert-warning'>
+	<span>
+		Ingat bahwa penggunaan selektor <code>:root</code> dapat mempengaruhi
+		gaya komponen kartu secara global/menyeluruh.
+	</span>
+</div>
+
+##### # Melalui selektor elemen tertentu
+
+Pada file `.css` Anda, menerapkan gaya komponen kartu untuk setiap elemen tertentu juga dapat dilakukan.
