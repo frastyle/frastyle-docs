@@ -1,0 +1,79 @@
+import CodeBox from '../../components/codeBox';
+
+## Lencana
+
+Komponen lencana merupakan sebuah komponen untuk memberikan gaya seperti sebuah label. Komponen ini juga menyediakan opsi penyesuaian warna latar belakang, warna teks, garis tepi, jarak konten dengan garis tepi, dan nilai tumpul sudut label.
+
+##### # Contoh Penggunaan
+
+<div class='row justify-center m-1'>
+	<div class='box text-center'>
+		<span class='badge-small'>KECIL</span>
+	</div>
+	<div class='box text-center'>
+		<span class='badge'>NORMAL</span>
+	</div>
+	<div class='box text-center'>
+		<span class='badge-large'>BESAR</span>
+	</div>
+</div>
+
+<CodeBox lang='html' className='mt-1 mb-3'>{`
+<div class="card">
+	<span class="badge-small">KECIL</span>
+	<span class="badge">NORMAL</span>
+	<span class="badge-large">BESAR</span>
+</div>
+`}</CodeBox>
+
+###### Tipe lencana
+
+<div className='alert-info'>
+	<span>
+		Untuk beberapa tema, komponen lencana memiliki tipe yang tersedia
+		seperti tabel berikut. Namun pada standar framework fitur ini{' '}
+		<b>dinonaktifkan</b>.
+	</span>
+</div>
+
+| Class             | Keterangan               |
+| ----------------- | ------------------------ |
+| `badge-primary`   | Warna lencana utama      |
+| `badge-secondary` | Warna lencana sekunder   |
+| `badge-success`   | Warna lencana berhasil   |
+| `badge-warning`   | Warna lencana peringatan |
+| `badge-danger`    | Warna lencana bahaya     |
+| `badge-info`      | Warna lencana info       |
+
+<br />
+
+### Penyesuaian Gaya
+
+Komponen lencana memiliki opsi penyesuaian gaya diantaranya:
+
+| Properti         | Keterangan                                      |
+| ---------------- | ----------------------------------------------- |
+| `--bg-badge`     | Mengatur warna latar belakang lencana           |
+| `--text-badge`   | Mengatur warna teks pada lencana                |
+| `--space-badge`  | Mengatur jarak konten dengan garis tepi lencana |
+| `--border-badge` | Mengatur garis tepi pada lencana                |
+| `--corner-badge` | Mengatur tumpul sudut lencana                   |
+
+<br />
+
+Penyesuaian gaya ini dapat diterapkan dengan menggunakan berbagai cara berikut:
+
+##### # Melalui selektor `:root`
+
+Pada file `.css` Anda, penyesesuaian melalui selektor global yaitu menggunakan `:root` dapat dilakkan dengan cara berikut:
+
+<div className='alert-warning'>
+	<span>
+		Ingat bahwa penggunaan selektor <code>:root</code> dapat mempengaruhi
+		gaya komponen lencana secara global/menyeluruh.
+	</span>
+</div>
+
+##### # Melalui selektor elemen tertentu
+
+Pada file `.css` Anda, menerapkan gaya komponen lencana untuk setiap elemen tertentu juga dapat dilakukan.
