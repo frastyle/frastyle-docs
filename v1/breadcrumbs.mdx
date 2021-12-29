@@ -1,0 +1,85 @@
+import CodeBox from '../../components/codeBox';
+
+## Navigasi Lokasi
+
+Navigasi lokasi yang merupakan komponen untuk menunjukkan lokasi halaman web yang sedang dibuka sesuai hierarki navigasi.
+
+Komponen ini dapat ditambahkan dengan menuliskan class `breadcrumb` pada elemen `<list>`.
+
+##### # Contoh Penggunaan
+
+<ul class='breadcrumb justify-center mt-2'>
+	<li>
+		<a href=''>Negara</a>
+	</li>
+	<li>
+		<a href=''>Indonesia</a>
+	</li>
+	<li>
+		<span>Pulau</span>
+	</li>
+	<li class='active'>
+		<span>Jawa</span>
+	</li>
+</ul>
+
+<CodeBox lang='html' className='mt-2 mb-3'>{`
+<ul class="breadcrumb">
+    <li><a href="">Negara</a></li>
+    <li><a href="">Indonesia</a></li>
+    <li><span>Pulau</span></li>
+    <li class="active"><span>Jawa</span></li>
+</ul>
+`}</CodeBox>
+
+### Penyesuaian Gaya
+
+Komponen navigasi lokasi memiliki opsi penyesuaian gaya diantaranya:
+
+| Properti               | Keterangan                                               |
+| ---------------------- | -------------------------------------------------------- |
+| `--divider-breadcrumb` | Mengatur konten pemisah. Standar: **/**                  |
+| `--space-breadcrumb`   | Mengatur jarak antara konten - pemisah. Standar: **4px** |
+
+<br />
+
+Penyesuaian gaya ini dapat diterapkan dengan menggunakan berbagai cara berikut:
+
+##### # Melalui selektor `:root`
+
+Pada file `.css` Anda, penyesesuaian melalui selektor global yaitu menggunakan `:root` dapat dilakkan dengan cara berikut:
+
+<div className='alert-warning'>
+	<span>
+		Ingat bahwa penggunaan selektor <code>:root</code> dapat mempengaruhi
+		gaya navigasi lokasi secara global/menyeluruh.
+	</span>
+</div>
+
+<iframe
+	width='100%'
+	height='200'
+	src='//jsfiddle.net/bagasnur/8qb1psrh/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
+	allowfullscreen='allowfullscreen'
+	allowpaymentrequest
+	className='mb-2 outline-dark'
+	style={{
+		borderRadius: '16px',
+		overflow: 'hidden',
+	}}></iframe>
+
+##### # Melalui selektor elemen tertentu
+
+Pada file `.css` Anda, menerapkan gaya navigasi lokasi untuk setiap elemen tertentu dapat dilakukan dengan cara berikut:
+
+<iframe
+	width='100%'
+	height='200'
+	src='//jsfiddle.net/bagasnur/bhLwzocv/embedded/result,html,css,resources/dark/?fontColor=c3cee3&menuColor=21282c'
+	allowfullscreen='allowfullscreen'
+	allowpaymentrequest
+	className='mb-2 outline-dark'
+	style={{
+		borderRadius: '16px',
+		overflow: 'hidden',
+	}}></iframe>
