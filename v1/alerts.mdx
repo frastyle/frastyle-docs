@@ -1,0 +1,76 @@
+import CodeBox from '../../components/codeBox';
+
+## Pesan
+
+Komponen pesan merupakan sebuah komponen yang biasa digunakan sebagai pesan kepada pengguna sebagai peringatan maupun informasi penting. Komponen pesan ini juga menyediakan opsi penyesuaian warna latar belakang, warna teks, garis tepi, jarak konten dengan garis tepi, dan nilai tumpul sudut komponen pesan.
+
+##### # Contoh Penggunaan
+
+<div class='row justify-center mx-1'>
+	<div class='alert'>
+		<span class='alert-desc'>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos,
+			culpa!
+		</span>
+	</div>
+</div>
+
+<CodeBox lang='html' className='mb-3'>{`
+<div class="alert">
+	<span>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, culpa!
+	</span>
+</div>
+`}</CodeBox>
+
+###### Tipe pesan
+
+<div className='alert-info'>
+	<span>
+		Untuk beberapa tema, komponen pesan memiliki tipe yang tersedia seperti
+		tabel berikut. Namun pada standar framework fitur ini{' '}
+		<b>dinonaktifkan</b>.
+	</span>
+</div>
+
+| Class             | Keterangan             |
+| ----------------- | ---------------------- |
+| `alert-primary`   | Warna pesan utama      |
+| `alert-secondary` | Warna pesan sekunder   |
+| `alert-success`   | Warna pesan berhasil   |
+| `alert-warning`   | Warna pesan peringatan |
+| `alert-danger`    | Warna pesan bahaya     |
+| `alert-info`      | Warna pesan info       |
+
+<br />
+
+### Penyesuaian Gaya
+
+Komponen pesan memiliki opsi penyesuaian gaya diantaranya:
+
+| Properti         | Keterangan                                    |
+| ---------------- | --------------------------------------------- |
+| `--bg-alert`     | Mengatur warna latar belakang pesan           |
+| `--text-alert`   | Mengatur warna teks pada pesan                |
+| `--space-alert`  | Mengatur jarak konten dengan garis tepi pesan |
+| `--border-alert` | Mengatur garis tepi pada pesan                |
+| `--corner-alert` | Mengatur tumpul sudut pesan                   |
+
+<br />
+
+Penyesuaian gaya ini dapat diterapkan dengan menggunakan berbagai cara berikut:
+
+##### # Melalui selektor `:root`
+
+Pada file `.css` Anda, penyesesuaian melalui selektor global yaitu menggunakan `:root` dapat dilakukan dengan cara berikut:
+
+<div className='alert-warning'>
+	<span>
+		Ingat bahwa penggunaan selektor <code>:root</code> dapat mempengaruhi
+		gaya komponen pesan secara global/menyeluruh.
+	</span>
+</div>
+
+##### # Melalui selektor elemen tertentu
+
+Pada file `.css` Anda, menerapkan gaya komponen pesan untuk setiap elemen tertentu juga dapat dilakukan.
